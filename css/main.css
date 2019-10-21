@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&subset=latin-ext');
+
+html, body *{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+/********************************************************************
+                           Global styles
+********************************************************************/
+body {
+    font-family:'PT Sans', sans-serif;
+    background-color: transparent;
+    font-size: 20px;
+    color: #666a76;
+   /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;*/
+    position:relative;
+    width: 100vw;
+
+}
+.wrap{
+    overflow-x: hidden;
+}
+
+h2 {
+    text-align: center;
+    color: #529FB8;
+    margin-bottom: 80px;
+    margin-top: 120px;
+    background-color: transparent;
+    font-size: 40px;
+}
+main {
+    margin-bottom: 150px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+/********************************************************************
+                           Specific styles
+********************************************************************/
+
+#pocetna .pocetna,
+#o-nama .oNama,
+#galerija .gallery,
+#blog .news,
+#kontakt .con-tact{
+    background-color: #529FB8;
+    color: white;
+}
+
+
+/**********************
+ Animacija na početnoj
+***********************/
+
+.omot{
+    position: relative;
+}
+.hands-style{
+     position: absolute;
+     left: 50%;
+     top: 20px;
+     width: 300px;
+     z-index: 100;
+     transform: translateX(-90%);
+     margin: 0;
+}
+.family-style{
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 300px;
+    margin: 0;
+}
+
+.car-style{
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    z-index: 50;
+    width: 300px;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.slogan-style{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    z-index: 9000;
+    width: 300px;
+    transform: translateX(-50%);
+    margin: 0;
+
+}
+
+@keyframes moving {
+    from{
+        top: -10px;
+        left: 1100px;
+    }
+    to{
+        top: -10px;
+        left: 800px;
+    }
+}
+
+
+
+@keyframes outcoming {
+    from{
+        top: 700px;
+        left: 50%;
+    }
+    to{
+        top: 300px;
+        left: 50%;
+    }
+}
+
+/****** Navigacija ********/
+
+.navbar{
+    margin-bottom: 50px;
+}
+.navbar.navbar-default{
+
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 20;
+
+}
+.navbar-default .navbar-nav>li>a:hover{
+
+    color: white;
+    background-color: #529FB8;
+}
+
+.navbar-header{
+    float: none;
+}
+
+.navbar-nav{
+    float: none;
+}
+.nav li a {
+    padding: 15px;
+
+}
+
+.nav>ul{
+    text-align: center;
+}
+
+.navbar-default .navbar-nav>li>a{
+    font-size: 22px;
+    color: #529FB8;
+    _padding-bottom: 10px;
+}
+
+button.navbar-toggle{
+    margin-top: -80px;
+}
+
+button.navbar-toggle.collapsed{
+    margin-top: -80px;
+}
+
+.nav>li {
+    margin-bottom: 20px;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-toggle .icon-bar {
+    width: 30px;
+
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #529FB8;
+}
+
+
+/* FOOTER */
+
+.home-start{
+
+    min-height: calc(100vh - 98px);
+}
+.main-footer {
+    background-color:#529FB8 ;
+    position: absolute;
+    z-index: 200;
+    width: 100vw;
+    margin-bottom: 20px;
+}
+.main-footer .container {
+    border-top: 1px solid #529FB8;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-footer p {
+    font-size: 15px;
+    padding-top: 5px;
+    color: white;
+}
+.main-footer p a {
+    color: white;
+    text-underline: white;
+
+}
+.main-footer p a:hover {
+    color: white;
+}
+
+.omot .img-responsive{
+    margin: auto;
+}
+.small ,small{
+    color: white;
+    font-size:15px;
+
+}
+
+
+/********************************************************************
+                           Helper classes
+********************************************************************/
+@media screen and (max-width: 767px){
+
+    .navbar-default .navbar-nav>li>a{
+        font-size: 22px;
+        color: #529FB8;
+        _padding-bottom: 15px;
+        margin: auto;
+        width: 150px;
+
+    }
+    .nav li a {
+        padding: 15px;
+
+    }
+}
+
+@media screen and (min-width: 768px){
+    .nav>li{
+        display: inline-block;
+        float: none;
+    }
+
+    .navbar{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 991px) and (min-width: 450px){
+
+    .hands-style{
+        position: absolute;
+        left: 48%;
+        top: 100px;
+        transform: translateX(-100%);
+        width: 550px;
+        z-index: 60;
+        animation: moving 3.5s forwards linear;
+
+    }
+    .family-style{
+        position: absolute;
+        left: 70%;
+        top: 30px;
+        transform: translateX(-10%);
+        width: 550px;
+        z-index: 40;
+        animation: outcoming 3.5s forwards linear;
+
+    }
+
+    .slogan-style{
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9000;
+        width: 550px;
+
+    }
+    .car-style{
+        position: absolute;
+        top: 200px;
+        left: 52%;
+        transform: translateX(-50%);
+        z-index: 50;
+        width: 550px;
+        animation: car 3.5s forwards linear;
+
+    }
+
+
+
+@keyframes moving {
+    from{
+        top: -200px;
+        left: 25%;
+    }
+    to{
+        top: 100px;
+        left: 48%;
+    }
+}
+
+
+
+@keyframes outcoming {
+
+    from{
+         top: -200px;
+         left: 75%;
+     }
+     to{
+         top: 30px;
+         left: 55%;
+     }
+ }
+
+@keyframes car {
+
+    from{
+        top: 700px;
+        left: 52%;
+
+    }
+    to{
+        top: 200px;
+        left: 52%;
+    }
+}
+
+}
+
+
+@media (min-width: 992px){
+
+    .hands-style{
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        transform: translateX(-85%);
+        width: 650px;
+        animation: moving 3.5s forwards linear;
+    }
+    .family-style{
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        transform: translateX(-15%);
+        width: 650px;
+        animation: outcoming 3.5s forwards linear;
+    }
+
+    .slogan-style{
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9000;
+        width: 650px;
+    }
+    .car-style{
+        position: absolute;
+        top: 360px;
+        left: 50%;
+        transform: translateX(-45%);
+        z-index: 50;
+        width: 650px;
+        animation: car 3.5s forwards linear;
+    }
+    .main-footer{
+        margin: 0;
+    }
+}
+
+@keyframes moving {
+    from{
+        top: -200px;
+        left: 25%;
+    }
+    to{
+        top: 30px;
+        left: 48%;
+    }
+}
+
+@keyframes outcoming {
+    from{
+        top: -200px;
+        left: 75%;
+    }
+    to{
+        top: 0px;
+        left: 55%;
+    }
+}
+
+@keyframes car {
+
+    from{
+        top: 700px;
+        left: 55%;
+
+    }
+    to{
+        top: 360px;
+        left: 52%;
+    }
+}
+
+
+@media (min-width: 1200px){
+
+    .hands-style{
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translateX(-85%);
+        width: 650px;
+    }
+    .family-style{
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        width: 650px;
+    }
+
+    .slogan-style{
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9000;
+        width: 650px;
+    }
+    .car-style{
+        position: absolute;
+        top: 450px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 50;
+        width: 650px;
+    }
+}
+
